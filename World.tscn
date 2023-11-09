@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://o7hfhognwedr"]
+
+[ext_resource type="PackedScene" uid="uid://cuf1hngqehd47" path="res://UI/HUD/HUD.tscn" id="1_aqiyi"]
+[ext_resource type="Script" path="res://World.cs" id="1_oh5ws"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_oh5ws")
+
+[node name="HUD" parent="." instance=ExtResource("1_aqiyi")]
+top_level = true

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtvnmbevxgf5s"]
+
+[ext_resource type="Script" path="res://Entities/Actors/Player/Player.cs" id="1_4jnfl"]
+[ext_resource type="Texture2D" uid="uid://bdvq0qoniyyy1" path="res://icon.svg" id="2_wdw7q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lny5t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ql0bo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wdw7q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_4jnfl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lny5t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_ql0bo")
+frame_progress = 0.904318
+
+[node name="Abilities" type="Node" parent="."]
